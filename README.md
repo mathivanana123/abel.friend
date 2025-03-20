@@ -1,116 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Godson A - Portfolio</title>
-    <base href="/">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>Portfolio</title>
     <style>
-        * {
+        body {
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
-        body {
-            background-color: #e9efff;
-            color: #333;
+            background-color: #84a6e9;
         }
 
         header {
-            background: linear-gradient(135deg, #941919, #c0392b);
+            background-color: #941919;
             color: #fff;
             text-align: center;
-            padding: 3rem 0;
-            position: relative;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 2rem 0;
+            position: relative; /* Add this */
         }
 
+        .header-content h1 {
+            font-size: 2.5rem;
+        }
+
+        /* Add styles for the round profile picture */
         .profile-picture {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            object-fit: cover;
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            border: 3px solid white;
+            width: 100px; /* Adjust the size as needed */
+            height: 100px;
+            border-radius: 75%; /* Create a circular shape */
+            object-fit: cover; /* To ensure the image fills the circular area */
+            position: absolute; /* Add this */
+            top: 75px; /* Adjust top position as needed */
+            left: 75px; /* Adjust left position as needed */
         }
 
         nav {
-            background-color: #222;
+            background-color: #333;
+            color: #fff;
             text-align: center;
-            padding: 10px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
         }
 
         nav ul {
-            list-style: none;
+            list-style-type: none;
+            padding: 0;
         }
 
         nav ul li {
             display: inline;
-            margin: 0 15px;
+            margin: 0 20px;
         }
 
         nav ul li a {
-            color: white;
             text-decoration: none;
-            font-size: 18px;
-            transition: 0.3s;
-        }
-
-        nav ul li a:hover {
-            color: #f39c12;
+            color: #fff;
         }
 
         .section-content {
-            background: white;
+            background-color: #fff;
             padding: 2rem;
             margin: 1rem;
-            border-radius: 15px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            transition: transform 0.3s;
-        }
-
-        .section-content:hover {
-            transform: scale(1.02);
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: justify;
         }
 
         .download-button {
-            display: inline-block;
-            background: #333;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 25px;
+            background-color: #333;
+            color: #fff;
+            padding: 0.5rem 1rem;
             text-decoration: none;
-            transition: 0.3s;
+            border-radius: 20px;
+            display: inline-block;
+            margin-top: 10px;
+            align-self: center;
         }
 
         .download-button:hover {
-            background: #555;
+            background-color: #555;
         }
 
         footer {
             text-align: center;
             padding: 1rem 0;
-            background-color: #222;
+            background-color: #333;
             color: #fff;
-            margin-top: 20px;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
         }
     </style>
 </head>
 <body>
     <header>
-        <img src="../src/assets/images/photo.jpg" class="profile-picture" alt="Profile Picture">
-        <h1>Godson A</h1>
-        <p>Web Developer | AI Enthusiast</p>
+        <div class="header-content">
+            <!-- Add your profile picture here -->
+            <img src="./photo.jpg" class="profile-picture">
+            <h1>Godson A</h1>
+            <p>Am Web developer</p>
+        </div>
     </header>
 
     <nav>
@@ -120,45 +108,67 @@
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#resume">Resume</a></li>
+           
         </ul>
     </nav>
 
-    <section id="about" class="section-content">
-        <h2>About Me</h2>
-        <p>I am a passionate web developer specializing in modern frameworks and technologies, including JavaScript, React, and AI-driven solutions.</p>
+    <section id="about">
+        <div class="section-content">
+            <h2>About Me</h2>
+            <p>I'm a <b>web development</b>"As a highly motivated and detail-oriented web developer, I specialize in building responsive, scalable, and secure web applications using the latest technologies. With a strong foundation in HTML, CSS, JavaScript, and React,
+                I am confident in my ability to deliver high-quality web solutions that meet and exceed client expectations. 
+                With a passion for innovation and a love for learning, I am always looking for new challenges and opportunities to grow and improve as a developer."</p>
+
+        </div>
     </section>
 
-    <section id="education" class="section-content">
-        <h2>Education</h2>
-        <p>Sri Devi Arts & Science College (University of Madras) - BCA</p>
+    <section id="education">
+        <div class="section-content">
+            <h2>Education</h2>
+            <p>sri devi arts and science college(university of madras)  - BCA</p>
+            
+            
+        </div>
     </section>
 
-    <section id="skills" class="section-content">
-        <h2>Skills</h2>
-        <ul>
-            <li>Python</li>
-            <li>Java</li>
-            <li>Web Design</li>
-            <li>Spring Boot</li>
-            <li>AI Development</li>
-            <li>C++</li>
-            <li>Excel & Word</li>
-        </ul>
+    <section id="skills">
+        <div class="section-content">
+            <h2>Skills</h2>
+            <ul>
+                <li>python</li>
+                <li>java</li>
+                <li>web design</li>
+                <li>Spring</li>
+                <li>AI</li>
+                <li>word</li>
+                <li>c++</li>
+                <li>Excel</li>
+            </ul>
+        </div>
     </section>
 
-    <section id="projects" class="section-content">
-        <h2>Projects</h2>
-        <ul>
-            <li><a href="#">IBM CSS</a></li>
-            <li><a href="#">LinkedIn Clone</a></li>
-            <li><a href="#">IBM Chatbot</a></li>
-            <li><a href="#">College Portal</a></li>
-        </ul>
+    <section id="projects">
+        <div class="section-content">
+            <h2>Projects</h2>
+            <ul>
+                <li><a href="#">ibm css</a></li>
+                <li><a href="#">linked in</a></li>
+                <li><a href="#">IBM chatbot</a></li>
+                <li><a href="#">College Portal</a></li> 
+                <!-- Add more project links here -->
+            </ul>
+        </div>
     </section>
 
-    <section id="resume" class="section-content">
-        <h2>Resume</h2>
-        <a href="https://your-resume-link.com" target="_blank" class="download-button">Download CV</a>
+    <section id="resume">
+    
+        <div class="section-content">
+            <center>
+            <h2>Resume</h2>
+            <a href="file:///C:/Users/admin/Downloads/Completion%20Certificate%20the%20gir%20hub%20_%20SkillsBuild%20(19).pdf"_blank" class="download-button">Download CV</a>
+        </center>
+        </div>
+        
     </section>
 
     <footer>
@@ -166,21 +176,23 @@
     </footer>
 
     <script>
+        // Smooth scrolling to section when clicking on navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
             });
         });
-
-
-
-        
     </script>
 </body>
 </html>
-
-
 
